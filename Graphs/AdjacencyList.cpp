@@ -22,8 +22,16 @@ public:
 		vertex_list[dest].neighbors.push_back(src);
 	}
 
-	void printGraph(){
-		
+	void printGraph(int num_vertices){
+		for (int i = 0; i < num_vertices; ++i)
+		{
+			cout << "Vertex: " << i << "->";
+			for (auto x: vertex_list[i])
+			{
+				cout << x << " ";
+			}
+			cout << endl;
+		}
 	}
 
 private:
