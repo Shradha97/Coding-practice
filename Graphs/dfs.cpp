@@ -41,7 +41,7 @@ class Solution {
       dfs_list.push_back(root);
       
       for(auto i:adj[root]){
-          if(!vis[i]]) dfs(adj, dfs_list, vis, adj[root][i]);
+          if(!vis[i]) dfs(adj, dfs_list, vis, adj[root][i]);
       }
       
       return;

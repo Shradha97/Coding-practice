@@ -6,18 +6,18 @@ int static t[1001][1001];
 int solution(vector<int> &values, vector<int> &weights, int n, int w){
 	if(n==0 || w==0){
 			return 0;
-		}
-		if(t[n][w] != -1){
-			return t[n][w];
-		} 
-		
-		if(weights[n-1]<=w){
-			return t[n][w] = max(values[n-1]+maxProfit(values, weights, n-1, w-weights[n-1]),
-							maxProfit(values, weights, n-1, w));
-		}
-		else{
-			return t[n][w] = maxProfit(values, weights, n-1, w);
-		}
+	}
+	if(t[n][w] != -1){
+		return t[n][w];
+	} 
+	
+	if(weights[n-1]<=w){
+		return t[n][w] = max(values[n-1]+maxProfit(values, weights, n-1, w-weights[n-1]),
+						maxProfit(values, weights, n-1, w));
+	}
+	else{
+		return t[n][w] = maxProfit(values, weights, n-1, w);
+	}
 }
 
 // memoization 
