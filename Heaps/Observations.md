@@ -14,4 +14,15 @@
 ### Some Heap properties
 1. Heap is a complete binary tree.
 2. Heap is a tree where the parent node is always greater than/less than the child node.
-3. BUT, in STL in the priority queue format, 
+3. BUT, in STL in the priority queue format, the order of children can be unsorted, but the parent node is always greater than/less than the child node.
+
+### Some common observations for some kinds of patterns
+1. Whenever asked about kth SMALLEST element and want to use HEAP - use MAX HEAP.
+    - This way the k smallest elements will be present in the priority queue starting from the bottom.
+    - Any element greater than the kth SMALLEST element will be popped out of the queue as the size is restricted to k.
+    - The top element of the queue will be the kth SMALLEST element.
+
+2. Whenever asked about kth LARGEST element and want to use HEAP - use MIN HEAP. (Follow similar reasoning as above).
+
+### Good explanation links to some questions
+1. [Kth largest element in an array](https://leetcode.com/problems/kth-largest-element-in-an-array/solutions/60309/c-stl-partition-and-heapsort/) - The solution talks about different approaches to solve the problem, and the best approach -> PARTIAL SORT (a variant of quick sort).
