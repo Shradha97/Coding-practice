@@ -1,7 +1,7 @@
+// Using minHeap of size k
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
-        // Use minheap of size k
         priority_queue <int, vector<int>, greater<int>> minHeap;
         for(int i=0; i< nums.size(); i++){
             minHeap.push(nums[i]);
